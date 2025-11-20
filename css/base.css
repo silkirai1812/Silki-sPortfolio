@@ -1,0 +1,73 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  overflow-x: hidden; 
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+    color: #e5e7eb;
+    min-height: 100vh;
+    box-sizing: border-box;
+  overflow-x: hidden; 
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+main .section {
+    padding: 3rem 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    background: #0af;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 10000;
+}
+
+/* GLOBAL BG OVERLAY */
+.page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.navbar,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
